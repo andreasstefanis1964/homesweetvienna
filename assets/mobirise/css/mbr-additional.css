@@ -2260,11 +2260,11 @@ strong {
 }
 .cid-tYfQmSHqN3 .panel-group .card .card-header .panel-title:not(.collapsed) .mbr-iconfont {
   transform: rotate(-180deg);
-  color: #f9a600;
-  background-color: #192227;
+  color: #d1b081;
+  background-color: #000000;
 }
 .cid-tYfQmSHqN3 .panel-group .card .card-header .panel-title:not(.collapsed) .panel-title-edit {
-  color: #192227;
+  color: #000000;
 }
 .cid-tYfQmSHqN3 .panel-group .card .card-header .panel-title .panel-title-edit {
   margin-bottom: 0;
@@ -2279,8 +2279,8 @@ strong {
   height: 60px;
   border-radius: 50%;
   font-size: 30px;
-  color: #192227;
-  background-color: #f9a600;
+  color: #000000;
+  background-color: #d1b081;
   margin-left: 10px;
   transition: all 0.3s ease-in-out;
 }
