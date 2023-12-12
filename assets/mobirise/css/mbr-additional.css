@@ -1418,7 +1418,7 @@ strong {
 .cid-ty21Fx6Brq {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-image: url("../../../assets/images/background1.jpg");
+  background-color: #23c8c4;
 }
 .cid-ty21Fx6Brq .mbr-fallback-image.disabled {
   display: none;
@@ -1525,7 +1525,7 @@ strong {
   min-width: 130px;
   min-height: 130px;
   border-radius: 50%;
-  background-color: #1a1e21;
+  background-color: #ffc04f;
 }
 @media (max-width: 1399px) {
   .cid-ty21Fx6Brq .number-wrap {
