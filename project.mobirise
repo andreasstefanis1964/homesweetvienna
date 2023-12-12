@@ -907,9 +907,9 @@
             "slides": [
               {
                 "image": "@PROJECT_PATH@/assets/images/d57a6451.webp",
-                "active": false,
+                "active": true,
                 "showButtons": true,
-                "showText": true,
+                "showText": false,
                 "showTitle": true,
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -922,11 +922,11 @@
                 "overlay": true,
                 "contentAlign": "right",
                 "text": "zur Selbstverpflegung, nur 7 Minuten von der Altstadt entfernt.",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn display-4 btn-info\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> <a data-app-btn=\"true\" class=\"btn btn-white-outline display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">FOR MAC</a>"
+                "buttons": "<a data-app-btn=\"true\" class=\"btn display-4 btn-info\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> "
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/d57a6415.webp",
-                "active": true,
+                "active": false,
                 "showButtons": true,
                 "showText": false,
                 "showTitle": true,
@@ -947,7 +947,7 @@
                 "image": "@PROJECT_PATH@/assets/images/d57a6507.webp",
                 "active": false,
                 "showButtons": true,
-                "showText": true,
+                "showText": false,
                 "showTitle": true,
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -959,8 +959,8 @@
                 "textTitle": "Gemütliche Apartments in Wien",
                 "overlay": true,
                 "contentAlign": "right",
-                "text": "zur Selbstverpflegung, nur 7 Minuten von der Altstadt entfernt.",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> <a data-app-btn=\"true\" class=\"btn btn-white-outline display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>"
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> "
               }
             ]
           }
