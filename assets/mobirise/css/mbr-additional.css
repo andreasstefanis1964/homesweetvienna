@@ -881,7 +881,7 @@ strong {
 }
 @media (min-width: 992px) {
   .cid-ty20H9zv1J .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
-    max-height: calc(98.5vh - 3rem);
+    max-height: calc(98.5vh - 3.4rem);
   }
 }
 .cid-ty20H9zv1J .navbar.collapsed .dropdown-menu .dropdown-submenu {
