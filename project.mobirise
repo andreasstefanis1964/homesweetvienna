@@ -63,7 +63,7 @@
     "mcSmartCart": {
       "currency": "USD"
     },
-    "uniqCompNum": 3,
+    "uniqCompNum": 5,
     "versionPublish": "5.9.6"
   },
   "pages": {
@@ -725,130 +725,375 @@
           "_anchor": "aheader1-2"
         },
         {
-          "alias": false,
+          "_name": "gallery1",
+          "_sourceTheme": "voyagem4",
           "_styles": {
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
+            "background-color": "@bgColor",
+            "overflow": "hidden",
+            "box-sizing": "border-box",
+            ".mbr-section-title": {
+              "margin-bottom": "25px"
             },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
+            ".mbr-section-subtitle": {
+              "margin-bottom": "88px",
+              "font-weight": "400"
             },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
+            ".image": {
+              "position": "relative",
+              "z-index": "0",
+              "top": "-50px",
+              "img": {
+                "z-index": "-1",
+                "width": "100%",
+                "max-height": "410px",
+                "object-fit": "cover"
+              }
             },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
+            ".mbr-gallery-filter": {
+              "text-align": "left",
+              "padding": "0 20px",
+              "border-bottom": "1px solid @borderColor",
+              ".btn": {
+                "padding": "0 20px 40px",
+                "margin": "0",
+                "margin-right": "35px",
+                "color": "@tagsColor !important",
+                "font-weight": "700",
+                "text-align": "left",
+                "background": "transparent !important",
+                "position": "relative",
+                "border": "none",
+                "min-width": "auto",
+                "width": "auto"
+              },
+              "ul": {
+                "display": "block",
+                "li": {
+                  "position": "relative",
+                  "padding": "0"
+                }
+              },
+              "li:not(.active) .btn.active:after, li.active .btn:not(.active):after, .mbr-gallery-filter .btn:hover:after": {
+                "content": "\"\"",
+                "position": "absolute",
+                "left": "0",
+                "right": "auto",
+                "width": "100%",
+                "bottom": "0",
+                "height": "11px",
+                "background-color": "@activeTabColor",
+                "transition": "all 0.3s ease"
+              }
+            },
+            ".mbr-gallery-row": {
+              "margin-top": "50px"
+            },
+            ".mbr-slider .carousel-control": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-slider .carousel-control-prev": {
+              "left": "0",
+              "margin-left": "2.5rem",
+              "border-radius": "4px"
+            },
+            ".mbr-slider .carousel-control-next": {
+              "right": "0",
+              "margin-right": "2.5rem",
+              "border-radius": "4px"
+            },
+            ".mbr-slider .modal-body .close": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-gallery-item > div::before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
               "width": "100%",
               "height": "100%",
+              "background": "@overlayColor",
+              "opacity": "0",
+              "transition": "0.2s opacity ease-in-out",
+              "& when (@gradOverlay)": {
+                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+              }
+            },
+            ".mbr-gallery-item > div:hover::before": {
+              "opacity": "@overlayOpacity !important"
+            },
+            ".mbr-gallery-title": {
+              "transition": "all .3s",
               "position": "absolute",
+              "display": "block",
+              "font-weight": "700",
+              "width": "100%",
+              "bottom": "30px",
+              "left": "0",
+              "text-align": "center",
+              "padding": "0 1rem",
+              "color": "#fff",
+              "background": "transparent"
+            },
+            "& when (@showIcon)": {
+              ".icon-focus": {
+                "transition": "all .3s",
+                "top": "30%",
+                "width": "48px",
+                "height": "48px",
+                "transform": "translateY(-30%)"
+              }
+            },
+            "& when not (@showIcon)": {
+              ".icon-focus": {
+                "display": "none"
+              }
+            },
+            ".mbr-gallery-item": {
+              "> div img, div:before": {
+                "border-radius": "4px"
+              },
+              "> div": {
+                "transition": "all .3s",
+                "border-radius": "4px"
+              },
+              "&:hover": {
+                "> div": {
+                  "transform": "scale(0.95)"
+                }
+              }
+            },
+            ".carousel-control-prev": {
+              ".mbri-left:before": {
+                "content": "\"\\e90a\""
+              }
+            },
+            ".carousel-control-next": {
+              ".mbri-right:before": {
+                "content": "\"\\e909\""
+              }
+            },
+            ".modal-body a.close": {
+              "border-radius": "0",
+              "font-size": "32px",
               "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
+              "right": "0",
+              "height": "70px",
+              "width": "70px",
+              "line-height": "70px"
             },
-            ".row": {
-              "align-items": "flex-start",
-              "column-gap": "60px",
-              "row-gap": "20px",
-              "@media (max-width: 1399px)": {
-                "column-gap": "40px"
+            "@media (max-width: 991px)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "20px",
+                "text-align": "center"
               },
-              "& when (@reverseContent)": {
-                "flex-direction": "row-reverse"
-              }
-            },
-            ".col-text": {
-              "display": "flex",
-              "align-items": "flex-start",
-              "width": "~'calc(50% - 30px)'",
-              "@media (max-width: 1399px)": {
-                "width": "~'calc(50% - 20px)'"
+              ".mbr-section-title": {
+                "text-align": "center"
               },
-              "@media (max-width: 1199px)": {
-                "width": "100%"
-              }
-            },
-            ".card-title": {
-              "color": "#e3ebf3"
-            },
-            ".mbr-text": {
-              "margin-top": "20px",
-              "color": "#6c7a88",
-              "@media (max-width: 767px)": {
-                "margin-top": "12px"
-              }
-            },
-            ".mbr-section-btn": {
-              "margin-top": "20px",
-              "@media (max-width: 767px)": {
-                "margin-top": "12px"
-              }
-            },
-            ".col-item": {
-              "display": "flex",
-              "flex-wrap": "wrap",
-              "align-items": "flex-start",
-              "gap": "32px",
-              "width": "~'calc(50% - 30px)'",
-              "@media (max-width: 1399px)": {
-                "gap": "20px",
-                "width": "~'calc(50% - 20px)'"
+              ".image": {
+                "top": "auto",
+                "height": "420px"
               },
-              "@media (max-width: 1199px)": {
-                "width": "100%"
+              ".mbr-gallery-filter": {
+                ".btn": {
+                  "padding": "0 0 22px"
+                },
+                "ul li": {
+                  "margin-bottom": "10px"
+                }
               },
-              "@media (max-width: 767px)": {
-                "gap": "12px"
+              ".mbr-gallery-item": {
+                "> div img, div:before": {
+                  "height": "auto",
+                  "border-radius": "3px"
+                },
+                "> div": {
+                  "border-radius": "3px"
+                }
               }
             },
-            ".item-wrap": {
-              "display": "flex",
-              "align-items": "center",
-              "justify-content": "flex-start",
-              "gap": "16px",
-              "width": "~'calc(50% - 16px)'",
-              "@media (max-width: 1399px)": {
-                "width": "~'calc(50% - 10px)'"
-              },
-              "@media (max-width: 767px)": {
-                "width": "100%"
+            "@media (max-width: 767px)": {
+              ".image": {
+                "height": "290px"
               }
-            },
-            ".number-wrap": {
-              "display": "flex",
-              "justify-content": "center",
-              "align-items": "center",
-              "padding": "10px",
-              "min-width": "130px",
-              "min-height": "130px",
-              "border-radius": "50%",
-              "background-color": "@numberBg",
-              "@media (max-width: 1399px)": {
-                "padding": "5px",
-                "min-width": "100px",
-                "min-height": "100px"
-              }
-            },
-            ".number-text": {
-              "color": "#e3ebf3"
-            },
-            ".item-text": {
-              "color": "#6c7a88"
             }
           },
-          "_name": "afeatures12",
-          "_sourceTheme": "homem5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features12 homem5\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"mobirise-icons2\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <input type=\"range\" inline title=\"Item Count\" name=\"itemCount\" min=\"1\" max=\"4\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Number\" name=\"showNumber\">\n        <input type=\"color\" title=\"Number Bg\" name=\"numberBg\" value=\"#ffc04f\" condition=\"showNumber\">\n        <input type=\"checkbox\" title=\"Item Text\" name=\"showItemText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#23c8c4\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1a1e21\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-text\" mbr-if=\"showTitle || showText || showButtons\">\n                <div class=\"card-wrap\">\n                    <h6 class=\"card-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">Gemütliche Apartments nahe der Altstadt Wien</h6>\n                    <p class=\"mbr-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Das Home Sweet Apartments empfängt Sie in Wien, 10 Gehminuten vom Schloss Belvedere entfernt und bietet Unterkunft zur Selbstverpflegung und kostenfreies WLAN. Sie wohnen nur 15 Gehminuten von der U-Bahn-Station Landstraße Wien-Mitte entfernt. \n                    </p>\n                    <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                        <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Learn More</a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-item\">\n                <div class=\"item-wrap\">\n                    <div class=\"number-wrap\" mbr-if=\"showNumber\">\n                        <p class=\"number-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".number-text\">\n                           99%\n                        </p>\n                    </div>\n                    <p class=\"item-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-text\" mbr-if=\"showItemText\">Positive Feedback<br></p>\n                </div>\n\n                <div class=\"item-wrap\" mbr-if=\"itemCount > 1\">\n                    <div class=\"number-wrap\" mbr-if=\"showNumber\">\n                        <p class=\"number-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".number-text\">16+</p>\n                    </div>\n                    <p class=\"item-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".item-text\" mbr-if=\"showItemText\">\n                        Years of Experience\n                    </p>\n                </div>\n                <div class=\"item-wrap\" mbr-if=\"itemCount > 2\">\n                    <div class=\"number-wrap\" mbr-if=\"showNumber\">\n                        <p class=\"number-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".number-text\">\n                            76%\n                        </p>\n                    </div>\n                    <p class=\"item-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-text\" mbr-if=\"showItemText\">\n                        feugiat\n                    </p>\n                </div>\n                <div class=\"item-wrap\" mbr-if=\"itemCount > 3\">\n                    <div class=\"number-wrap\" mbr-if=\"showNumber\">\n                        <p class=\"number-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".number-text\">\n                            43%\n                        </p>\n                    </div>\n                    <p class=\"item-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".item-text\" mbr-if=\"showItemText\">\n                        ultricies\n                    </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ty21Fx6Brq",
-          "_anchor": "afeatures12-2",
-          "_protectedParams": [],
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-gallery mbr-slider-carousel extGallery gallery1 voyagem4_gallery1\" group=\"Sliders & Galleries\" plugins=\"Masonry,Slider,BootstrapCarouselSwipe,Gallery,VimeoVideo\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"8\" inline>\n\t\t<input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" inline>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n\t\t<header>Filter</header>\n\t\t<input type=\"color\" title=\"Tags Color\" name=\"tagsColor\" value=\"#003d59\">\n\t\t<input type=\"color\" title=\"Active Tab Color\" name=\"activeTabColor\" value=\"#46877e\">\n\t\t<input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#cce4f0\">\n\t\t<header>Gallery</header>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#003d59\">\n\t\t<input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\">\n\t\t<input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#ffffff\" condition=\"gradOverlay\">\n\t\t<input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" inline>\n\t\t<input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#259ecb\">\n\t\t<input type=\"checkbox\" title=\"Show Icon\" name=\"showIcon\" checked>\n\t\t<input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\" mbr-if=\"showTitle || showSubtitle || showImage\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-12\" mbr-class=\"{'col-lg-5' : showImage, 'col-lg-12' : !showImage}\">\n\t\t\t\t<h3 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">11 Apartments</h3>\n\t\t\t\t<h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubtitle\">Das Home Sweet Apartments empfängt Sie in Wien, 10 Gehminuten vom Schloss Belvedere entfernt und bietet Ihnen 11 komfortable Apartments zur Selbstverpflegung mit kostenfreiem WLAN. Sie wohnen nur 15 Gehminuten von der U-Bahn-Station Landstraße Wien-Mitte entfernt.</h4>\n\t\t\t</div>\n\t\t\t<div class=\"col-lg-7 col-12\" mbr-if=\"showImage\">\n\t\t\t\t<div class=\"image\">\n\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/d57a6415.webp\" alt title>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"gallery__wrap container\">\n\t\t<div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"1\" mbr-gallery-show-bullets></div>\n\t</div>\n</section>",
+          "_anchor": "gallery1-4",
+          "_isUserblock": true,
+          "_cid": "tYeQX9js3n",
+          "_protectedParams": [
+            "text_all",
+            "gallery__filtersTextStyle",
+            "gallery__filtersBtnStyle",
+            "gallery"
+          ],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {
+            "text_all": "All",
+            "gallery__filtersTextStyle": "display-7",
+            "gallery__filtersBtnStyle": "btn-primary-outline",
+            "gallery": [
+              {
+                "tags": "Creative",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6580.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6580.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": true
+              },
+              {
+                "tags": "Animated",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6561.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6561.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6451.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6451.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6431.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6431.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Responsive",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6510.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6510.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Responsive",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6619.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6619.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Animated",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6603.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6603.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Animated",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6564.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6564.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6565.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6565.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Animated",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6488.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6488.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Animated",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6474.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6474.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Creative",
+                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/d57a6507.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/d57a6507.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              }
+            ]
+          }
         },
         {
           "alias": false,
