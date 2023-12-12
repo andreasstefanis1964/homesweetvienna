@@ -962,377 +962,6 @@
         },
         {
           "_name": "gallery1",
-          "_sourceTheme": "voyagem4",
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "background-color": "@bgColor",
-            "overflow": "hidden",
-            "box-sizing": "border-box",
-            ".mbr-section-title": {
-              "margin-bottom": "25px"
-            },
-            ".mbr-section-subtitle": {
-              "margin-bottom": "88px",
-              "font-weight": "400"
-            },
-            ".image": {
-              "position": "relative",
-              "z-index": "0",
-              "top": "-50px",
-              "img": {
-                "z-index": "-1",
-                "width": "100%",
-                "max-height": "410px",
-                "object-fit": "cover"
-              }
-            },
-            ".mbr-gallery-filter": {
-              "text-align": "left",
-              "padding": "0 20px",
-              "border-bottom": "1px solid @borderColor",
-              ".btn": {
-                "padding": "0 20px 40px",
-                "margin": "0",
-                "margin-right": "35px",
-                "color": "@tagsColor !important",
-                "font-weight": "700",
-                "text-align": "left",
-                "background": "transparent !important",
-                "position": "relative",
-                "border": "none",
-                "min-width": "auto",
-                "width": "auto"
-              },
-              "ul": {
-                "display": "block",
-                "li": {
-                  "position": "relative",
-                  "padding": "0"
-                }
-              },
-              "li:not(.active) .btn.active:after, li.active .btn:not(.active):after, .mbr-gallery-filter .btn:hover:after": {
-                "content": "\"\"",
-                "position": "absolute",
-                "left": "0",
-                "right": "auto",
-                "width": "100%",
-                "bottom": "0",
-                "height": "11px",
-                "background-color": "@activeTabColor",
-                "transition": "all 0.3s ease"
-              }
-            },
-            ".mbr-gallery-row": {
-              "margin-top": "50px"
-            },
-            ".mbr-slider .carousel-control": {
-              "background": "#1b1b1b"
-            },
-            ".mbr-slider .carousel-control-prev": {
-              "left": "0",
-              "margin-left": "2.5rem",
-              "border-radius": "4px"
-            },
-            ".mbr-slider .carousel-control-next": {
-              "right": "0",
-              "margin-right": "2.5rem",
-              "border-radius": "4px"
-            },
-            ".mbr-slider .modal-body .close": {
-              "background": "#1b1b1b"
-            },
-            ".mbr-gallery-item > div::before": {
-              "content": "''",
-              "position": "absolute",
-              "left": "0",
-              "top": "0",
-              "width": "100%",
-              "height": "100%",
-              "background": "@overlayColor",
-              "opacity": "0",
-              "transition": "0.2s opacity ease-in-out",
-              "& when (@gradOverlay)": {
-                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
-              }
-            },
-            ".mbr-gallery-item > div:hover::before": {
-              "opacity": "@overlayOpacity !important"
-            },
-            ".mbr-gallery-title": {
-              "transition": "all .3s",
-              "position": "absolute",
-              "display": "block",
-              "font-weight": "700",
-              "width": "100%",
-              "bottom": "30px",
-              "left": "0",
-              "text-align": "center",
-              "padding": "0 1rem",
-              "color": "#fff",
-              "background": "transparent"
-            },
-            "& when (@showIcon)": {
-              ".icon-focus": {
-                "transition": "all .3s",
-                "top": "30%",
-                "width": "48px",
-                "height": "48px",
-                "transform": "translateY(-30%)"
-              }
-            },
-            "& when not (@showIcon)": {
-              ".icon-focus": {
-                "display": "none"
-              }
-            },
-            ".mbr-gallery-item": {
-              "> div img, div:before": {
-                "border-radius": "4px"
-              },
-              "> div": {
-                "transition": "all .3s",
-                "border-radius": "4px"
-              },
-              "&:hover": {
-                "> div": {
-                  "transform": "scale(0.95)"
-                }
-              }
-            },
-            ".carousel-control-prev": {
-              ".mbri-left:before": {
-                "content": "\"\\e90a\""
-              }
-            },
-            ".carousel-control-next": {
-              ".mbri-right:before": {
-                "content": "\"\\e909\""
-              }
-            },
-            ".modal-body a.close": {
-              "border-radius": "0",
-              "font-size": "32px",
-              "top": "0",
-              "right": "0",
-              "height": "70px",
-              "width": "70px",
-              "line-height": "70px"
-            },
-            "@media (max-width: 991px)": {
-              ".mbr-section-subtitle": {
-                "margin-bottom": "20px",
-                "text-align": "center"
-              },
-              ".mbr-section-title": {
-                "text-align": "center"
-              },
-              ".image": {
-                "top": "auto",
-                "height": "420px"
-              },
-              ".mbr-gallery-filter": {
-                ".btn": {
-                  "padding": "0 0 22px"
-                },
-                "ul li": {
-                  "margin-bottom": "10px"
-                }
-              },
-              ".mbr-gallery-item": {
-                "> div img, div:before": {
-                  "height": "auto",
-                  "border-radius": "3px"
-                },
-                "> div": {
-                  "border-radius": "3px"
-                }
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".image": {
-                "height": "290px"
-              }
-            }
-          },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-gallery mbr-slider-carousel extGallery gallery1 voyagem4_gallery1\" group=\"Sliders & Galleries\" plugins=\"Masonry,Slider,BootstrapCarouselSwipe,Gallery,VimeoVideo\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"8\" inline>\n\t\t<input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" inline>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n\t\t<header>Filter</header>\n\t\t<input type=\"color\" title=\"Tags Color\" name=\"tagsColor\" value=\"#003d59\">\n\t\t<input type=\"color\" title=\"Active Tab Color\" name=\"activeTabColor\" value=\"#46877e\">\n\t\t<input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#cce4f0\">\n\t\t<header>Gallery</header>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#003d59\">\n\t\t<input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\">\n\t\t<input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#ffffff\" condition=\"gradOverlay\">\n\t\t<input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" inline>\n\t\t<input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#259ecb\">\n\t\t<input type=\"checkbox\" title=\"Show Icon\" name=\"showIcon\" checked>\n\t\t<input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\" mbr-if=\"showTitle || showSubtitle || showImage\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-12\" mbr-class=\"{'col-lg-5' : showImage, 'col-lg-12' : !showImage}\">\n\t\t\t\t<h3 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">HomeSweet Apartments</h3>\n\t\t\t\t<h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubtitle\">Das Home Sweet Apartments empfängt Sie in Wien, 10 Gehminuten vom Schloss Belvedere entfernt und bietet Ihnen 11 komfortable Apartments zur Selbstverpflegung mit kostenfreiem WLAN. Sie wohnen nur 15 Gehminuten von der U-Bahn-Station Landstraße Wien-Mitte entfernt.</h4>\n\t\t\t</div>\n\t\t\t<div class=\"col-lg-7 col-12\" mbr-if=\"showImage\">\n\t\t\t\t<div class=\"image\">\n\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/d57a6415.webp\" alt title>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"gallery__wrap container\">\n\t\t<div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"1\" mbr-gallery-show-bullets></div>\n\t</div>\n</section>",
-          "_anchor": "gallery1-4",
-          "_isUserblock": true,
-          "_cid": "tYeQX9js3n",
-          "_protectedParams": [
-            "text_all",
-            "gallery__filtersTextStyle",
-            "gallery__filtersBtnStyle",
-            "gallery"
-          ],
-          "_global": false,
-          "_once": false,
-          "_params": {
-            "text_all": "All",
-            "gallery__filtersTextStyle": "display-7",
-            "gallery__filtersBtnStyle": "btn-primary-outline",
-            "gallery": [
-              {
-                "tags": "Creative",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6580.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6580.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": true
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6561.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6561.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Awesome",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6451.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6451.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Awesome",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6431.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6431.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Responsive",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6510.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6510.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Responsive",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6619.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6619.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6603.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6603.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6564.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6564.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Awesome",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6565.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6565.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6488.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6488.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animated",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6415.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6415.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Creative",
-                "videoPreview": "@ADDONS_PATH@/voyagem4/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/d57a6507.webp",
-                "thumb": "@PROJECT_PATH@/assets/images/d57a6507.webp",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              }
-            ]
-          }
-        },
-        {
-          "_name": "gallery1",
           "_sourceTheme": "storem4",
           "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,Slider,BootstrapCarouselSwipe,Gallery,VimeoVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <!-- <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked> -->\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" condition=\"showTitle\" checked>\n        <input type=\"color\" title=\"Overlay Color 1\" name=\"overlayColor1\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" checked>\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#d1b081\" condition=\"gradientOverlay\">\n        <input type=\"range\" title=\"Items Overlay Opacity\" name=\"overlayOpacityItem\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" inline>\n        <input type=\"color\" title=\"Tags Color\" name=\"tagsColor\" value=\"#232323\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/storem4/components/_images/background3.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title,.underline\">Bildgallerie</h2>\n    <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n        <div class=\"line\"></div>\n    </div>\n<!--     <div mbr-class=\"{'container': !fullWidth}\"> -->\n        <div class=\"col-left-gallery\" mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-filter mbr-gallery-show-text></div>\n   <!--  </div> -->\n</section>",
           "_styles": {
@@ -1474,7 +1103,7 @@
             "gallery__filtersBtnStyle": "btn-primary-outline",
             "gallery": [
               {
-                "tags": "Animated",
+                "tags": "HomeSweet Apartments",
                 "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -1484,7 +1113,7 @@
                 "title": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": true
               },
               {
                 "tags": "Animated",
@@ -1510,7 +1139,7 @@
                 "title": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": true
+                "active": false
               },
               {
                 "tags": "Animated",
@@ -1584,6 +1213,110 @@
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
                 "image": "@PROJECT_PATH@/assets/images/d57a6510.webp",
                 "thumb": "@PROJECT_PATH@/assets/images/d57a6510.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/flachwinkelaufnahme-des-stephansdoms-in-wien.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/flachwinkelaufnahme-des-stephansdoms-in-wien.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/grabenstrasse-von-wien-mit-einer-pest-saeule-oesterreich-abendansicht.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/grabenstrasse-von-wien-mit-einer-pest-saeule-oesterreich-abendansicht.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/karlskirche-in-wien.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/karlskirche-in-wien.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/nachtansicht-hofburg-wien.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/nachtansicht-hofburg-wien.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/schloss-schoenbrunn-in-wien-oesterreich.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/schloss-schoenbrunn-in-wien-oesterreich.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/stephansdom-in-wien-oesterreich-an-einem-schoenen-herbsttag.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/stephansdom-in-wien-oesterreich-an-einem-schoenen-herbsttag.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/stephansplatz-ein-beruehmter-platz-in-wien-oesterreich-ohne-menschen.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/stephansplatz-ein-beruehmter-platz-in-wien-oesterreich-ohne-menschen.webp",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Wien",
+                "videoPreview": "@ADDONS_PATH@/storem4/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/trainer-in-der-hofburg.webp",
+                "thumb": "@PROJECT_PATH@/assets/images/trainer-in-der-hofburg.webp",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
