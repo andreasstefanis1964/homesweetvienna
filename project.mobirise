@@ -1105,7 +1105,7 @@
               }
             },
             ".mbr-section-title": {
-              "color": "#ffffff",
+              "color": "#000000",
               "text-align": "center"
             },
             ".mbr-card-title": {
