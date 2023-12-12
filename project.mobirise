@@ -883,6 +883,9 @@
             },
             ".mbr-overlay ~ .container-slide": {
               "z-index": "auto"
+            },
+            "H2": {
+              "color": "#23c8c4"
             }
           },
           "_cid": "tYf3tD5AIr",
