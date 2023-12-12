@@ -668,7 +668,7 @@
         {
           "_name": "slider1",
           "_sourceTheme": "hotelm4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"slider1 hotelm4_slider1 carousel slide\" group=\"Sliders & Galleries\"\n    plugins=\"YTPlayer, VimeoPlayer, SliderVideo, BootstrapCarouselSwipe\" data-interval=\"false\" data-bs-interval=\"false\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"carousel\" title=\"Slides\" name=\"slides\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-carousel=\"slides\" class=\"full-screen\" mbr-carousel-embedded></div>\n\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"slider1 hotelm4_slider1 carousel slide\" group=\"Sliders & Galleries\" plugins=\"YTPlayer, VimeoPlayer, SliderVideo, BootstrapCarouselSwipe\" data-interval=\"false\" data-bs-interval=\"false\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"carousel\" title=\"Slides\" name=\"slides\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-carousel=\"slides\" class=\"full-screen\" mbr-carousel-embedded></div>\n\n</section>",
           "_styles": {
             ".modal-body .close": {
               "background": "#1b1b1b"
@@ -895,13 +895,13 @@
           "_global": false,
           "_once": false,
           "_params": {
-            "slides__autoplay": "false",
+            "slides__autoplay": "hover",
             "slides__autoplayInterval": 4000,
             "slides__showBullets": true,
             "slides": [
               {
                 "image": "@PROJECT_PATH@/assets/images/d57a6451.webp",
-                "active": true,
+                "active": false,
                 "showButtons": true,
                 "showText": true,
                 "showTitle": true,
@@ -920,9 +920,9 @@
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/d57a6415.webp",
-                "active": false,
+                "active": true,
                 "showButtons": true,
-                "showText": true,
+                "showText": false,
                 "showTitle": true,
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -934,8 +934,8 @@
                 "textTitle": "Gemütliche Apartments in Wien",
                 "overlay": true,
                 "contentAlign": "right",
-                "text": "zur Selbstverpflegung, nur 7 Minuten von der Altstadt entfernt.",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> <a data-app-btn=\"true\" class=\"btn btn-white-outline display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>"
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> "
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/d57a6507.webp",
@@ -963,7 +963,7 @@
         {
           "_name": "content1",
           "_sourceTheme": "hotelm4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-section content1 hotelm4_content1\" group=\"Content\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"100\">\n\t\t<input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"32\" condition=\"showLines\">\n\t\t<hr>\n\t\t<input type=\"checkbox\" title=\"Show Lines\" name=\"showLines\" checked>\n\t\t<input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#259ecb\" condition=\"showLines\">\n\t\t<input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"inner-container\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\" mbr-if=\"showLines\">\n\t\t\t\t<p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\">\n\t\t\t\t\tDas komfortablen 11 Home Sweet Apartments empfangen Sie in Wien, nur 10 Gehminuten vom Schloss Belvedere entfernt. Die Apartments im Home Sweet verfügen jeweils über einen Flachbild-TV, einen Wohnbereich sowie ein Badezimmer mit einer Dusche, einem Haartrockner und kostenlosen Pflegeprodukten. Auch ein DVD- und ein CD-Player sind vorhanden.\n\t\t\t\t</p>\n\t\t\t\t<hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\" mbr-if=\"showLines\">\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"mbr-section content1 hotelm4_content1\" group=\"Content\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"100\">\n\t\t<input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"32\" condition=\"showLines\">\n\t\t<hr>\n\t\t<input type=\"checkbox\" title=\"Show Lines\" name=\"showLines\" checked>\n\t\t<input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#259ecb\" condition=\"showLines\">\n\t\t<input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"inner-container\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\" mbr-if=\"showLines\">\n\t\t\t\t<p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\">\n\t\t\t\t\tDas komfortablen 11 Home Sweet Apartments empfangen Sie in Wien, nur 10 Gehminuten vom Schloss Belvedere entfernt. Die Apartments im Home Sweet zur Selbstverpflegung verfügen jeweils über einen Flachbild-TV, einen Wohnbereich sowie ein Badezimmer mit einer Dusche, einem Haartrockner und kostenlosen Pflegeprodukten. Auch ein DVD- und ein CD-Player sind vorhanden.\n\t\t\t\t</p>\n\t\t\t\t<hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\" mbr-if=\"showLines\">\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
