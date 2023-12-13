@@ -941,7 +941,7 @@
                 "overlay": true,
                 "contentAlign": "right",
                 "text": "",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> "
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://homesweetapartments.at/book\" data-toolbar=\"-mbrBtnMove\" target=\"_blank\">BUCHEN SIE ONLINE</a> "
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/d57a6507.webp",
@@ -960,7 +960,7 @@
                 "overlay": true,
                 "contentAlign": "right",
                 "text": "",
-                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">BUCHEN SIE ONLINE</a> "
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info display-4\" data-app-placeholder=\"Type Text\" href=\"https://homesweetapartments.at/book\" data-toolbar=\"-mbrBtnMove\" target=\"_blank\">BUCHEN SIE ONLINE</a> "
               }
             ]
           }
